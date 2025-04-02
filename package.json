@@ -1,6 +1,6 @@
 {
   "name": "@alejofl/shuffle-array",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A small library that takes an array as input and returns a new array that is shuffled.",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -9,7 +9,8 @@
   "scripts": {
     "build": "microbundle",
     "pretest": "npm run build",
-    "test": "npx jest --coverage"
+    "test": "npx jest --coverage",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
     "shuffle",
     "functional"
   ],
-  "author": "your name <your-email@email.com> (https://yourwebsite.com)",
+  "author": "Alejo Flores Lucey <alejo@misterflores.com> (https://yourwebsite.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alejofl/shuffle-array/issues"

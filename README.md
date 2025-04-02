@@ -30,7 +30,7 @@ yarn add @alejofl/shuffle-array
 Basic Usage
 
 ```js
-import shuffleArray from '@alejofl/shuffle-array';
+import { shuffleArray } from '@alejofl/shuffle-array';
 
 const startArray = [1, 2, 3, 4, 5];
 const newShuffledArray = shuffleArray(startArray);
@@ -44,7 +44,7 @@ console.log(newShuffledArray); // e.g., [3, 1, 5, 2, 4]
 Shuffle a list of user IDs:
 
 ```js
-import shuffleArray from '@alejofl/shuffle-array';
+import { shuffleArray } from '@alejofl/shuffle-array';
 
 const userIds = ['u1', 'u2', 'u3', 'u4'];
 const randomizedOrderOfUserIds = shuffleArray(userIds);
@@ -63,6 +63,22 @@ const shuffledDeck = shuffleArray(deck);
 console.log(shuffledDeck); // e.g., ['Two of Hearts', 'Ace of Spades', ...]
 ```
 
+Use in a quiz application to randomize questions:
+
+```js
+import { cryptoShuffleArray } from '@alejofl/shuffle-array';
+
+const questions = [
+   { question: 'What is 2 + 2?', answer: 4 },
+   { question: 'What is the capital of France?', answer: 'Paris' },
+   { question: 'What is the chemical symbol for gold?', answer: 'Au' },
+   { question: 'Who wrote "Romeo and Juliet"?', answer: 'William Shakespeare' }
+];
+const randomizedQuestions = cryptoShuffleArray(questions);
+
+console.log(randomizedQuestions);
+```
+
 ## Contribution
 
 Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
@@ -71,7 +87,7 @@ Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for m
 
 Please refer to our [SECURITY.md](./SECURITY.md) for information about our security policies, how to report vulnerabilities, and our approach to handling security concerns.
 
-**Important Note**: This library uses non-cryptographic randomness (`Math.random()`). Do not rely on it for security-critical functionality.
+**Important Note**: This library offers both non-cryptographic randomness (`Math.random()`) and cryptographic randomness (`crypto` package).
 
 ## License
 
